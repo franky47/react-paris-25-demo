@@ -1,5 +1,5 @@
-import { Providers } from '@/components/providers'
 import '@workspace/ui/globals.css'
+import { ThemeProvider } from '@workspace/ui/lib/theme-provider'
 
 export default function RootLayout({
   children,
@@ -9,7 +9,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className="antialiased">
-        <Providers>{children}</Providers>
+        <ThemeProvider>{children}</ThemeProvider>
       </body>
     </html>
   )
