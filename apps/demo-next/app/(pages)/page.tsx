@@ -1,13 +1,16 @@
-import { Counter } from '@workspace/ui/components/counter'
+import { CounterMemory } from '@workspace/ui/views/demos/counter-memory'
+import { CounterUrl } from '@workspace/ui/views/demos/counter-url'
+import { Title } from '@workspace/ui/views/demos/title'
 import { Suspense } from 'react'
 
 export default function Page() {
   return (
     <div className="flex items-center justify-center">
       <div className="flex flex-col items-center justify-center gap-4">
-        <h1 className="text-2xl font-bold">Hello, React Paris!</h1>
         <Suspense>
-          <Counter />
+          <Title />
+          <CounterMemory />
+          <CounterUrl />
         </Suspense>
       </div>
     </div>
