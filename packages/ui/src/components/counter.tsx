@@ -8,5 +8,7 @@ export function Counter() {
     'count',
     parseAsInteger.withDefault(0)
   )
-  return <Button onClick={() => setCount((c) => c + 1)}>{count}</Button>
+  return (
+    <Button onClick={() => setCount((c) => c + 1)}>{count} days to go!</Button>
+  )
 }
