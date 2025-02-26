@@ -12,6 +12,7 @@
   "dependencies": {
     "@react-router/node": "7.2.0",
     "@react-router/serve": "7.2.0",
+    "@workspace/db": "workspace:*",
     "@workspace/ui": "workspace:*",
     "isbot": "5.1.23",
     "lucide-react": "0.475.0",

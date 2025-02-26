@@ -1,0 +1,36 @@
+{
+  "name": "@workspace/db",
+  "version": "0.0.0",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "db:generate": "drizzle-kit generate",
+    "db:introspect": "drizzle-kit introspect",
+    "db:push": "drizzle-kit push",
+    "db:migrate": "node src/migrate.ts",
+    "db:drop-migration": "drizzle-kit drop",
+    "db:seed": "node --env-file .env.local src/seed.ts",
+    "db:studio": "drizzle-kit studio"
+  },
+  "dependencies": {
+    "@spotify/web-api-ts-sdk": "1.2.0",
+    "ai": "4.1.46",
+    "better-sqlite3": "11.8.1",
+    "drizzle-orm": "0.39.1",
+    "ollama-ai-provider": "1.2.0",
+    "spotify-uri": "4.1.0"
+  },
+  "devDependencies": {
+    "@types/better-sqlite3": "7.6.12",
+    "@types/node": "22.13.5",
+    "@workspace/eslint-config": "workspace:*",
+    "@workspace/typescript-config": "workspace:*",
+    "drizzle-kit": "0.30.4",
+    "typescript": "5.7.3"
+  },
+  "exports": {
+    ".": "./src/index.ts",
+    "./queries": "./src/queries.ts",
+    "./spotify": "./src/spotify.ts"
+  }
+}

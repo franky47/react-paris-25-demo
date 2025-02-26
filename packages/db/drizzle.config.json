@@ -1,0 +1,9 @@
+{
+  "schema": "./src/schema.ts",
+  "dialect": "sqlite",
+  "out": "./drizzle",
+  "dbCredentials": {
+    "url": "albums.db"
+  },
+  "tablesFilter": ["*"]
+}
