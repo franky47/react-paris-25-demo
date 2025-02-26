@@ -11,7 +11,7 @@ export function Album({ data }: AlbumProps) {
   return (
     <figure className="flex flex-col gap-2">
       <img
-        src={data.coverUrl}
+        src={`/img/albums/${data.id}.jpg`}
         alt={data.name}
         className="aspect-square object-cover rounded-md"
       />

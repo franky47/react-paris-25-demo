@@ -7,9 +7,10 @@
     "db:generate": "drizzle-kit generate",
     "db:introspect": "drizzle-kit introspect",
     "db:push": "drizzle-kit push",
-    "db:migrate": "node src/migrate.ts",
+    "db:migrate": "node scripts/migrate.ts",
     "db:drop-migration": "drizzle-kit drop",
-    "db:seed": "node --env-file .env.local src/seed.ts",
+    "db:seed": "node --env-file .env.local scripts/seed.ts",
+    "db:dl-images": "node scripts/download-images.ts",
     "db:studio": "drizzle-kit studio"
   },
   "dependencies": {

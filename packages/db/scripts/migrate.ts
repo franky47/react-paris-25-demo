@@ -1,6 +1,6 @@
 import { migrate } from 'drizzle-orm/better-sqlite3/migrator'
 
-import { db } from './index.js'
+import { db } from '../src/index.ts'
 
 export async function runMigrate() {
   console.log('⏳ Running migrations...')
