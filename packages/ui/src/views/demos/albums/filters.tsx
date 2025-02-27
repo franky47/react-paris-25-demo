@@ -19,8 +19,10 @@ export function Filters({ className, ...props }: ComponentProps<'nav'>) {
       <Input
         type="number"
         className="w-24"
-        // value={releaseYear ?? undefined}
-        // onChange={(e) => setSearchParams({ releaseYear: e.target.valueAsNumber })}
+        // value={releaseYear ?? ''}
+        // onChange={(e) =>
+        //   setSearchParams({ releaseYear: e.target.valueAsNumber })
+        // }
         placeholder="Year"
       />
       <Button>Clear</Button>
