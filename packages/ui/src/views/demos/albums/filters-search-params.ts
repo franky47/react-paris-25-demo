@@ -1,13 +1,8 @@
-import { createLoader, parseAsString, UrlKeys } from 'nuqs/server'
+import { createLoader, parseAsInteger, parseAsString } from 'nuqs/server'
 
 export const filtersSearchParams = {
   query: parseAsString.withDefault(''),
+  releaseYear: parseAsInteger,
 }
 
-export const filtersUrlKeys: UrlKeys<typeof filtersSearchParams> = {
-  query: 'q',
-}
-
-export const loadFilters = createLoader(filtersSearchParams, {
-  urlKeys: filtersUrlKeys,
-})
+export const loadFilters = createLoader(filtersSearchParams)

@@ -18,12 +18,7 @@ export function Album({ data }: AlbumProps) {
       <figcaption className="">
         <div className="leading-tight mb-1">{data.name}</div>
         <div className="text-sm text-gray-700 dark:text-gray-300">
-          {data.artist}
-        </div>
-        <div className="text-xs text-gray-700 dark:text-gray-300 flex items-center">
-          <span>
-            {data.releaseYear} • {data.tracks} tracks
-          </span>
+          {data.artist} • <span>{data.releaseYear}</span>
         </div>
       </figcaption>
     </figure>
