@@ -12,7 +12,7 @@ export function Title() {
 
 export function TitleHint() {
   const [count] = useQueryState('count', parseAsInteger.withDefault(0))
-  if (count === 0) {
+  if (count < 10) {
     return null
   }
   return (
