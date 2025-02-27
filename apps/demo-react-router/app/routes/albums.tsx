@@ -21,12 +21,3 @@ export default function AlbumsPage({ loaderData }: Route.ComponentProps) {
     </>
   )
 }
-
-export const meta: Route.MetaFunction = ({ data }) => {
-  return [
-    {
-      title: `Albums (${data.albums.length})`,
-      description: 'List of albums',
-    },
-  ]
-}
