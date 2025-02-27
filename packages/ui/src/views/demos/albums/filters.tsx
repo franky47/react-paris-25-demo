@@ -15,17 +15,24 @@ export function Filters({ className, ...props }: ComponentProps<'nav'>) {
         // value={query}
         // onChange={(e) => setSearchParams({ query: e.target.value })}
         placeholder="Search albums"
+        className="text-xl py-5"
       />
       <Input
         type="number"
-        className="w-24"
+        className="w-28 text-xl py-5"
         // value={releaseYear ?? ''}
         // onChange={(e) =>
-        //   setSearchParams({ releaseYear: e.target.valueAsNumber })
+        //   setSearchParams({
+        //     releaseYear: Number.isNaN(e.target.valueAsNumber)
+        //       ? null
+        //       : e.target.valueAsNumber,
+        //   })
         // }
         placeholder="Year"
       />
-      <Button>Clear</Button>
+      <Button size="lg" className="text-lg px-4">
+        Clear
+      </Button>
     </nav>
   )
 }
