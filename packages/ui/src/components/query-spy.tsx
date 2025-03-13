@@ -1,20 +1,15 @@
 'use client'
 
-import { parseAsInteger, parseAsString, useQueryStates } from 'nuqs'
 import { Fragment, type ComponentProps } from 'react'
 import { cn } from '../lib/utils.js'
 
-const searchParams = {
-  count: parseAsInteger,
-  query: parseAsString,
-  q: parseAsString,
-  releaseYear: parseAsInteger,
-  year: parseAsInteger,
+type QuerySpyProps = {
+  useSearchParams: () => URLSearchParams
 }
 
-export function QuerySpy() {
-  const [values] = useQueryStates(searchParams)
-  const querystring = Object.entries(values)
+export function QuerySpy({ useSearchParams }: QuerySpyProps) {
+  const searchParams = useSearchParams()
+  const items = Array.from(searchParams.entries())
     .filter(([, value]) => value !== null)
     .map(([key, value], index, list) => (
       <Fragment key={key + value}>
@@ -23,14 +18,14 @@ export function QuerySpy() {
         </span>
         <span className="text-gray-700 dark:text-gray-300">=</span>
         <span className="font-semibold text-[#cd1126] dark:text-[#fe6497]">
-          {value}
+          {value.replaceAll(' ', '+')}
         </span>
         {index < list.length - 1 && (
           <span className="text-gray-700 dark:text-gray-300">&</span>
         )}
       </Fragment>
     ))
-  if (querystring.length === 0) {
+  if (items.length === 0) {
     return (
       <QuerySpyBackground className="italic text-gray-500">
         &lt;empty query&gt;
@@ -40,7 +35,7 @@ export function QuerySpy() {
   return (
     <QuerySpyBackground>
       <span className="text-gray-700 dark:text-gray-300">?</span>
-      {querystring}
+      {items}
     </QuerySpyBackground>
   )
 }

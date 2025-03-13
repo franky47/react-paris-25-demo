@@ -1,4 +1,8 @@
-import { NuqsAdapter } from 'nuqs/adapters/react-router/v7'
+import {
+  NuqsAdapter,
+  useOptimisticSearchParams,
+} from 'nuqs/adapters/react-router/v7'
+
 import {
   isRouteErrorResponse,
   Links,
@@ -11,6 +15,7 @@ import {
 import '@workspace/ui/globals.css'
 
 import { Header } from '@workspace/ui/components/header'
+import { QuerySpy } from '@workspace/ui/components/query-spy'
 import { ThemeProvider } from '@workspace/ui/lib/theme-provider'
 import type { Route } from './+types/root'
 
@@ -36,7 +41,10 @@ export default function App() {
   return (
     <NuqsAdapter>
       <ThemeProvider>
-        <Header logo={<ReactRouterV7Logo />} />
+        <Header
+          logo={<ReactRouterV7Logo />}
+          querySpy={<QuerySpy useSearchParams={useOptimisticSearchParams} />}
+        />
         <Outlet />
       </ThemeProvider>
     </NuqsAdapter>
