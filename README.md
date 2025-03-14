@@ -1,31 +1,13 @@
-# shadcn/ui monorepo template
+# React Paris 2025 Demo app
 
-This template is for creating a monorepo with shadcn/ui.
+This is the demo app showcased in my React Paris 2025 talk: "Type-Safe URL State Management in React with nuqs".
 
-## Usage
-
-```bash
-pnpm dlx shadcn@latest init
+```
+pnpm install
+pnpm dev
 ```
 
-## Adding components
+It will run:
 
-To add components to your app, run the following command at the root of your `demo-next` app:
-
-```bash
-pnpm dlx shadcn@latest add button -c apps/demo-next
-```
-
-This will place the ui components in the `packages/ui/src/components` directory.
-
-## Tailwind
-
-Your `tailwind.config.ts` and `globals.css` are already set up to use the components from the `ui` package.
-
-## Using components
-
-To use the components in your app, import them from the `ui` package.
-
-```tsx
-import { Button } from '@workspace/ui/components/button'
-```
+- On `http://localhost:3000`, a Next.js app
+- On `http://localhost:3001`, the same app with React Router v7
