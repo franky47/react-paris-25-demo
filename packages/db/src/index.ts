@@ -10,7 +10,13 @@ function resolveDatabasePath() {
     return resolve(import.meta.dirname, '../albums.db')
   }
   // node_modules path for dependent packages
-  return resolve(process.cwd(), 'node_modules', '@workspace', 'db', 'albums.db')
+  return resolve(
+    process.cwd(),
+    'node_modules',
+    '@workspace',
+    'db',
+    'albums.db'
+  )
 }
 
 console.log(resolveDatabasePath())

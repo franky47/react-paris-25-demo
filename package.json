@@ -20,7 +20,10 @@
     "node": ">=23"
   },
   "prettier": {
-    "printWidth": 60
+    "printWidth": 70,
+    "trailingComma": "es5",
+    "singleQuote": true,
+    "semi": false
   },
   "pnpm": {
     "onlyBuiltDependencies": [

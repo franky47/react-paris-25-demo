@@ -22,7 +22,9 @@ export function getSpotifyAlbumId(uri: string) {
   }
 }
 
-export async function findAlbumById(id: string): Promise<NewAlbum | undefined> {
+export async function findAlbumById(
+  id: string
+): Promise<NewAlbum | undefined> {
   const result = await spotify.albums.get(id)
   return {
     id: result.id,

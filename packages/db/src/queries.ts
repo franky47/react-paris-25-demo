@@ -6,7 +6,10 @@ type FindAlbumsQuery = {
 }
 
 export function findAlbums(
-  { query, releaseYear }: FindAlbumsQuery = { query: '', releaseYear: null }
+  { query, releaseYear }: FindAlbumsQuery = {
+    query: '',
+    releaseYear: null,
+  }
 ) {
   return db.query.albums.findMany({
     where(fields, operators) {

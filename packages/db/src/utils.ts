@@ -37,6 +37,8 @@ export function isEmpty<TColumn extends AnyColumn>(column: TColumn) {
   `
 }
 
-export function isNotEmpty<TColumn extends AnyColumn>(column: TColumn) {
+export function isNotEmpty<TColumn extends AnyColumn>(
+  column: TColumn
+) {
   return not(isEmpty(column))
 }

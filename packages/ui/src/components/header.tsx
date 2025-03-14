@@ -10,7 +10,9 @@ type HeaderProps = {
 export function Header({ logo, querySpy }: HeaderProps) {
   return (
     <>
-      <Suspense fallback={<QuerySpyBackground />}>{querySpy}</Suspense>
+      <Suspense fallback={<QuerySpyBackground />}>
+        {querySpy}
+      </Suspense>
       <header className="h-16 flex items-center justify-between gap-2 pl-2 pr-4">
         <svg
           xmlns="http://www.w3.org/2000/svg"
