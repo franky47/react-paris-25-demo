@@ -19,6 +19,9 @@
   "engines": {
     "node": ">=23"
   },
+  "prettier": {
+    "printWidth": 60
+  },
   "pnpm": {
     "onlyBuiltDependencies": [
       "@swc/core",
