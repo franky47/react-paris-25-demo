@@ -10,20 +10,20 @@
     "test:types": "react-router typegen && tsc"
   },
   "dependencies": {
-    "@react-router/node": "7.2.0",
-    "@react-router/serve": "7.2.0",
+    "@react-router/node": "7.3.0",
+    "@react-router/serve": "7.3.0",
     "@workspace/db": "workspace:*",
     "@workspace/ui": "workspace:*",
     "isbot": "5.1.23",
     "lucide-react": "0.475.0",
-    "nuqs": "2.4.0",
+    "nuqs": "2.4.1",
     "react": "19.0.0",
     "react-dom": "19.0.0",
-    "react-router": "7.2.0"
+    "react-router": "7.3.0"
   },
   "devDependencies": {
-    "@react-router/dev": "7.2.0",
-    "@react-router/express": "7.2.0",
+    "@react-router/dev": "7.3.0",
+    "@react-router/express": "7.3.0",
     "@types/node": "22.13.5",
     "@types/react-dom": "19.0.4",
     "@types/react": "19.0.10",
