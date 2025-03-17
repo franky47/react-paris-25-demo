@@ -55,7 +55,7 @@ export function QuerySpyBackground({
   return (
     <pre
       className={cn(
-        'text-2xl border px-3 py-2 mx-2 my-2 rounded-lg',
+        'text-[22px] border px-3 py-2 mx-2 my-2 rounded-lg',
         className
       )}
       {...props}
