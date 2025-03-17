@@ -8,7 +8,10 @@ export default function Page() {
         <CounterButton />
       </div>
       <nav className="mt-24 text-center">
-        <Link to="/albums" className="underline text-gray-500">
+        <Link
+          to="/albums"
+          className="underline text-gray-500"
+        >
           SSR demo
         </Link>
       </nav>
