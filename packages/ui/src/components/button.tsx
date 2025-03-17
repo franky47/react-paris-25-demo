@@ -49,7 +49,13 @@ const Button = React.forwardRef<
   ButtonProps
 >(
   (
-    { className, variant, size, asChild = false, ...props },
+    {
+      className,
+      variant,
+      size = 'lg',
+      asChild = false,
+      ...props
+    },
     ref
   ) => {
     const Comp = asChild ? Slot : 'button'

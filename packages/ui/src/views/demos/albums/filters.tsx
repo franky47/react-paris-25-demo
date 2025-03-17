@@ -40,9 +40,7 @@ export function Filters({
         // }
         placeholder="Year"
       />
-      <Button size="lg" className="flex-1 text-lg px-4">
-        Clear
-      </Button>
+      <Button className="flex-1 text-lg px-4">Clear</Button>
     </nav>
   )
 }
