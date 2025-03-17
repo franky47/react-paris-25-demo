@@ -3,7 +3,12 @@ import type { Album } from '@workspace/db'
 type AlbumProps = {
   data: Pick<
     Album,
-    'id' | 'name' | 'artist' | 'coverUrl' | 'releaseYear' | 'tracks'
+    | 'id'
+    | 'name'
+    | 'artist'
+    | 'coverUrl'
+    | 'releaseYear'
+    | 'tracks'
   >
 }
 
@@ -16,7 +21,9 @@ export function Album({ data }: AlbumProps) {
         className="aspect-square object-cover rounded-md"
       />
       <figcaption className="">
-        <div className="leading-tight mb-1">{data.name}</div>
+        <div className="leading-tight mb-1">
+          {data.name}
+        </div>
         <div className="text-sm text-gray-700 dark:text-gray-300">
           {data.artist} • <span>{data.releaseYear}</span>
         </div>

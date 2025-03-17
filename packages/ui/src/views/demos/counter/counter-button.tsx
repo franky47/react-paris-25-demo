@@ -6,7 +6,10 @@ import { useState } from 'react'
 export function CounterButton() {
   const [count, setCount] = useState(0)
   return (
-    <Button onClick={() => setCount((c) => c + 1)} size="lg">
+    <Button
+      onClick={() => setCount((c) => c + 1)}
+      size="lg"
+    >
       With useState: {count}
     </Button>
   )

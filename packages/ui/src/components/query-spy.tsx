@@ -7,7 +7,9 @@ type QuerySpyProps = {
   useSearchParams: () => URLSearchParams
 }
 
-export function QuerySpy({ useSearchParams }: QuerySpyProps) {
+export function QuerySpy({
+  useSearchParams,
+}: QuerySpyProps) {
   const searchParams = useSearchParams()
   const items = Array.from(searchParams.entries())
     .filter(([, value]) => value !== null)
@@ -16,12 +18,16 @@ export function QuerySpy({ useSearchParams }: QuerySpyProps) {
         <span className="font-semibold text-[#002654] dark:text-[#00acff]">
           {key}
         </span>
-        <span className="text-gray-700 dark:text-gray-300">=</span>
+        <span className="text-gray-700 dark:text-gray-300">
+          =
+        </span>
         <span className="font-semibold text-[#cd1126] dark:text-[#fe6497]">
           {value.replaceAll(' ', '+')}
         </span>
         {index < list.length - 1 && (
-          <span className="text-gray-700 dark:text-gray-300">&</span>
+          <span className="text-gray-700 dark:text-gray-300">
+            &
+          </span>
         )}
       </Fragment>
     ))
@@ -34,7 +40,9 @@ export function QuerySpy({ useSearchParams }: QuerySpyProps) {
   }
   return (
     <QuerySpyBackground>
-      <span className="text-gray-700 dark:text-gray-300">?</span>
+      <span className="text-gray-700 dark:text-gray-300">
+        ?
+      </span>
       {items}
     </QuerySpyBackground>
   )

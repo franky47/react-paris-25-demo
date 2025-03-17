@@ -1,6 +1,10 @@
 import type { ReactNode } from 'react'
 
-export function AlbumGrid({ children }: { children: ReactNode }) {
+export function AlbumGrid({
+  children,
+}: {
+  children: ReactNode
+}) {
   return (
     <section
       role="feed"

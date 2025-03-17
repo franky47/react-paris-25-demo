@@ -11,7 +11,9 @@ for (const { id, coverUrl, name, artist } of albums) {
   const res = await fetch(coverUrl)
 
   if (!res.ok) {
-    throw new Error(`Failed to fetch image from ${coverUrl}`)
+    throw new Error(
+      `Failed to fetch image from ${coverUrl}`
+    )
   }
 
   const buffer = Buffer.from(await res.arrayBuffer())

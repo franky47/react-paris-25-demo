@@ -54,9 +54,13 @@ async function processAlbumRow(line: string) {
       .values({
         id: result.id,
         name: cleanedUpAlbumName,
-        artist: result.artists.map((a) => a.name).join(', '),
+        artist: result.artists
+          .map((a) => a.name)
+          .join(', '),
         coverUrl: result.images[0]!.url,
-        releaseYear: parseInt(result.release_date.slice(0, 4)),
+        releaseYear: parseInt(
+          result.release_date.slice(0, 4)
+        ),
         tracks: result.total_tracks,
       })
       .onConflictDoNothing()
@@ -65,7 +69,12 @@ async function processAlbumRow(line: string) {
       `Saved: ${insert?.name} by ${insert?.artist} (RS: ${album}, fetched: ${result.name})`
     )
   } catch (error) {
-    console.error('Failed to save %s by %s:', album, artist, error)
+    console.error(
+      'Failed to save %s by %s:',
+      album,
+      artist,
+      error
+    )
   }
 }
 

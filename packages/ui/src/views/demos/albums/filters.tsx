@@ -19,8 +19,10 @@ export function Filters({
     >
       <Input
         // value={query}
-        // onChange={(e) => setSearchParams({ query: e.target.value })}
-        // placeholder="Search albums"
+        // onChange={(e) =>
+        //   setSearchParams({ query: e.target.value })
+        // }
+        placeholder="Search albums"
         className="text-xl py-5 flex-2 lg:flex-1"
       />
       <Input

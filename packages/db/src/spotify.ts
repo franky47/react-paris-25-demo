@@ -39,7 +39,12 @@ export async function findAlbumById(
 export async function fetchAlbumData(
   query: string
 ): Promise<NewAlbum | undefined> {
-  const searchResult = await spotify.search(query, ['album'], 'FR', 1)
+  const searchResult = await spotify.search(
+    query,
+    ['album'],
+    'FR',
+    1
+  )
   const result = searchResult.albums.items[0]
   if (!result) {
     console.info('No result for query %s', query)

@@ -11,7 +11,9 @@ import { sqliteTableCreator } from 'drizzle-orm/sqlite-core'
  *
  * @see https://orm.drizzle.team/docs/goodies#multi-project-schema
  */
-export const sqliteTable = sqliteTableCreator((name) => name)
+export const sqliteTable = sqliteTableCreator(
+  (name) => name
+)
 
 export function takeFirstOrNull<TData>(data: TData[]) {
   return data[0] ?? null
@@ -25,7 +27,9 @@ export function takeFirstOrThrow<TData>(data: TData[]) {
   return first
 }
 
-export function isEmpty<TColumn extends AnyColumn>(column: TColumn) {
+export function isEmpty<TColumn extends AnyColumn>(
+  column: TColumn
+) {
   return sql<boolean>`
     case
       when ${column} is null then true
