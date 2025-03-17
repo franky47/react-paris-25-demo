@@ -12,9 +12,9 @@ export const albums = sqliteTable('albums', {
   createdAt: integer('created_at', { mode: 'timestamp' })
     .notNull()
     .default(sql`CURRENT_TIMESTAMP`),
-  updatedAt: integer('updated_at', { mode: 'timestamp' }).default(
-    sql`CURRENT_TIMESTAMP`
-  ),
+  updatedAt: integer('updated_at', {
+    mode: 'timestamp',
+  }).default(sql`CURRENT_TIMESTAMP`),
 })
 
 export type Album = typeof albums.$inferSelect

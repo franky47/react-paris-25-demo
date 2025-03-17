@@ -20,7 +20,7 @@ export function Filters({
       <Input
         // value={query}
         // onChange={(e) => setSearchParams({ query: e.target.value })}
-        placeholder="Search albums"
+        // placeholder="Search albums"
         className="text-xl py-5 flex-2 lg:flex-1"
       />
       <Input
@@ -29,7 +29,9 @@ export function Filters({
         // value={releaseYear ?? ''}
         // onChange={(e) =>
         //   setSearchParams({
-        //     releaseYear: Number.isNaN(e.target.valueAsNumber)
+        //     releaseYear: Number.isNaN(
+        //       e.target.valueAsNumber
+        //     )
         //       ? null
         //       : e.target.valueAsNumber,
         //   })

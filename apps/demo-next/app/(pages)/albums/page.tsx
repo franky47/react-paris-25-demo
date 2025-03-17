@@ -1,11 +1,11 @@
-import { findAlbums } from '@workspace/db/queries'
+import { database } from '@workspace/db/queries'
 import { AlbumGrid } from '@workspace/ui/demos/albums/album-grid'
 import { Album } from '@workspace/ui/views/demos/albums/album'
 
 type PageProps = {}
 
 export default async function AlbumsPage({}: PageProps) {
-  const albums = await findAlbums()
+  const albums = await database.findAlbums()
   return (
     <>
       <AlbumGrid>
