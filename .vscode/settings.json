@@ -1,5 +1,5 @@
 {
   "github.copilot.chat.codeGeneration.useInstructionFiles": true,
-  "editor.fontSize": 20,
+  "editor.fontSize": 22,
   "editor.snippetSuggestions": "none"
 }
