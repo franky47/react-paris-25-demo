@@ -1,5 +1,28 @@
 {
   "github.copilot.chat.codeGeneration.useInstructionFiles": true,
   "editor.fontSize": 22,
-  "editor.snippetSuggestions": "none"
+  "editor.snippetSuggestions": "none",
+  "workbench.colorCustomizations": {
+    "[One Monokai]": {
+      "editorGroup.emptyBackground": "#101113", // 1b1c21
+      "editor.background": "#000000", // "#18191e",
+      "editor.lineHighlightBackground": "#373d4872", // 373d4872
+      "activityBar.activeBackground": "#40444e", // 40444e
+      "activityBar.activeBorder": "#828dac", // 828dac
+      "activityBar.background": "#101113", // 1b1c21
+      "titleBar.inactiveBackground": "#101113", // 1b1c21
+      "titleBar.activeBackground": "#101113", // 1b1c21
+      "statusBar.background": "#101113", // 1b1c21
+      "editorGroupHeader.tabsBackground": "#101113", // 1b1c21
+      "tab.activeBackground": "#212329", // 2d323b
+      "tab.inactiveBackground": "#17191d", // 212329
+
+      "quickInput.background": "#101113",
+
+      "editorInlayHint.foreground": "#676f7d",
+      "editorInlayHint.background": "#0000",
+      "editorInlayHint.typeForeground": "#597185",
+      "editorInlayHint.parameterForeground": "#7d7567"
+    }
+  }
 }
