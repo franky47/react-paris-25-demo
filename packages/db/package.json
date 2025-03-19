@@ -1,5 +1,5 @@
 {
-  "name": "@workspace/db",
+  "name": "@root/db",
   "version": "0.0.0",
   "type": "module",
   "private": true,
@@ -24,8 +24,8 @@
   "devDependencies": {
     "@types/better-sqlite3": "7.6.12",
     "@types/node": "22.13.5",
-    "@workspace/eslint-config": "workspace:*",
-    "@workspace/typescript-config": "workspace:*",
+    "@root/eslint-config": "workspace:*",
+    "@root/typescript-config": "workspace:*",
     "drizzle-kit": "0.30.4",
     "typescript": "5.7.3"
   },

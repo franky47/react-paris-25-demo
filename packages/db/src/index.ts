@@ -13,7 +13,7 @@ function resolveDatabasePath() {
   return resolve(
     process.cwd(),
     'node_modules',
-    '@workspace',
+    '@root',
     'db',
     'albums.db'
   )

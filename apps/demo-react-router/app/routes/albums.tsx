@@ -1,6 +1,6 @@
-import { database } from '@workspace/db/queries'
-import { Album } from '@workspace/ui/views/demos/albums/album'
-import { AlbumGrid } from '@workspace/ui/views/demos/albums/album-grid'
+import { database } from '@root/db/queries'
+import { Album } from '@root/ui/views/demos/albums/album'
+import { AlbumGrid } from '@root/ui/views/demos/albums/album-grid'
 import type { Route } from './+types/albums'
 
 export async function loader({

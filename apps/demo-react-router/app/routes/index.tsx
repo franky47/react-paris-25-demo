@@ -1,4 +1,4 @@
-import { CounterButton } from '@workspace/ui/views/demos/counter/counter-button'
+import { CounterButton } from '@root/ui/views/demos/counter/counter-button'
 import { Link } from 'react-router'
 
 export default function Page() {

@@ -1,4 +1,4 @@
-import type { Album } from '@workspace/db'
+import type { Album } from '@root/db'
 
 type AlbumProps = {
   data: Pick<

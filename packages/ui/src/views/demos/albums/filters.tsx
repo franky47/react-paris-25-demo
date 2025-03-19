@@ -1,7 +1,7 @@
 'use client'
 
-import { Button } from '@workspace/ui/components/button'
-import { Input } from '@workspace/ui/components/input'
+import { Button } from '@root/ui/components/button'
+import { Input } from '@root/ui/components/input'
 import { FiltersSection } from './filters-section.js'
 
 export function Filters() {

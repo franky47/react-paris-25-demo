@@ -1,5 +1,5 @@
-import '@workspace/ui/globals.css'
-import { ThemeProvider } from '@workspace/ui/lib/theme-provider'
+import '@root/ui/globals.css'
+import { ThemeProvider } from '@root/ui/lib/theme-provider'
 import { NuqsAdapter } from 'nuqs/adapters/next/app'
 
 export default function RootLayout({

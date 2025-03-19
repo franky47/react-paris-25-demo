@@ -1,6 +1,6 @@
-import { database } from '@workspace/db/queries'
-import { AlbumGrid } from '@workspace/ui/demos/albums/album-grid'
-import { Album } from '@workspace/ui/views/demos/albums/album'
+import { database } from '@root/db/queries'
+import { AlbumGrid } from '@root/ui/demos/albums/album-grid'
+import { Album } from '@root/ui/views/demos/albums/album'
 
 type PageProps = {}
 

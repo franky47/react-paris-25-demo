@@ -12,19 +12,30 @@ import {
   ScrollRestoration,
 } from 'react-router'
 
-import '@workspace/ui/globals.css'
+import '@root/ui/globals.css'
 
-import { Header } from '@workspace/ui/components/header'
-import { QuerySpy } from '@workspace/ui/components/query-spy'
-import { ThemeProvider } from '@workspace/ui/lib/theme-provider'
+import { Header } from '@root/ui/components/header'
+import { QuerySpy } from '@root/ui/components/query-spy'
+import { ThemeProvider } from '@root/ui/lib/theme-provider'
 import type { Route } from './+types/root'
 
-export function Layout({ children }: { children: React.ReactNode }) {
+export function Layout({
+  children,
+}: {
+  children: React.ReactNode
+}) {
   return (
-    <html lang="en" className="antialiased" suppressHydrationWarning>
+    <html
+      lang="en"
+      className="antialiased"
+      suppressHydrationWarning
+    >
       <head>
         <meta charSet="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1"
+        />
         <Meta />
         <Links />
       </head>
@@ -43,7 +54,11 @@ export default function App() {
       <ThemeProvider>
         <Header
           logo={<ReactRouterV7Logo />}
-          querySpy={<QuerySpy useSearchParams={useOptimisticSearchParams} />}
+          querySpy={
+            <QuerySpy
+              useSearchParams={useOptimisticSearchParams}
+            />
+          }
         />
         <Outlet />
       </ThemeProvider>
@@ -51,7 +66,9 @@ export default function App() {
   )
 }
 
-export function ErrorBoundary({ error }: Route.ErrorBoundaryProps) {
+export function ErrorBoundary({
+  error,
+}: Route.ErrorBoundaryProps) {
   let message = 'Oops!'
   let details = 'An unexpected error occurred.'
   let stack: string | undefined
@@ -62,7 +79,11 @@ export function ErrorBoundary({ error }: Route.ErrorBoundaryProps) {
       error.status === 404
         ? 'The requested page could not be found.'
         : error.statusText || details
-  } else if (import.meta.env.DEV && error && error instanceof Error) {
+  } else if (
+    import.meta.env.DEV &&
+    error &&
+    error instanceof Error
+  ) {
     details = error.message
     stack = error.stack
   }
@@ -198,7 +219,14 @@ function ReactRouterV7Logo() {
           <stop offset="1" stopColor="#040000" />
         </linearGradient>
         <clipPath id="clip0_1_8005">
-          <rect x="2" y="2" width="190" height="68" rx="4" fill="white" />
+          <rect
+            x="2"
+            y="2"
+            width="190"
+            height="68"
+            rx="4"
+            fill="white"
+          />
         </clipPath>
         <clipPath id="clip1_1_8005">
           <rect

@@ -1,8 +1,15 @@
-import { NextQuerySpy, QuerySpyBackground } from '@/components/query-spy'
-import { Header } from '@workspace/ui/components/header'
+import {
+  NextQuerySpy,
+  QuerySpyBackground,
+} from '@/components/query-spy'
+import { Header } from '@root/ui/components/header'
 import { Suspense, type ReactNode } from 'react'
 
-export default function Layout({ children }: { children: ReactNode }) {
+export default function Layout({
+  children,
+}: {
+  children: ReactNode
+}) {
   return (
     <>
       <Header
