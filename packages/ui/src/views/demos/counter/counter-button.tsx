@@ -1,13 +1,16 @@
 'use client'
 
 import { Button } from '@root/ui/components/button'
-import { useState } from 'react'
+import { parseAsInteger, useQueryState } from 'nuqs'
 
 export function CounterButton() {
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useQueryState(
+    'count',
+    parseAsInteger.withDefault(0)
+  )
   return (
     <Button onClick={() => setCount((c) => c + 1)}>
-      With useState: {count}
+      With URL state: {count}
     </Button>
   )
 }
